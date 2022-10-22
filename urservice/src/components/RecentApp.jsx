@@ -14,6 +14,8 @@ const RecentApp = () => {
     <UserContainer>
       <h1>Recent Applicants</h1>
       <Span>Name</Span>
+      <Span>View's CV</Span>
+      <Span></Span>
     </UserContainer>
   );
 };
