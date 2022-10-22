@@ -8,12 +8,17 @@ import PeopleIcon from "@mui/icons-material/People";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-const Container = styled.div``;
+const Container = styled.div`
+  background-color: #134d4d;
+  width: 20%;
+  height: 100vh;
+  color: white;
+`;
 
 const ImgContainer = styled.div`
   width: 80px;
   height: 80px;
-  margin-left: 25px;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,10 +39,34 @@ const MenuContainer = styled.div`
 
 const OptionContainer = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 7px;
+  gap: 10px;
+
+  &:hover {
+    color: #3c91e6;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  /* 
+  &:active {
+    border: solid 3px white;
+    border-radius: 15px;
+    background-color: #134d4d;
+  } */
 `;
 
-const LogoutContainer = styled.div``;
+const LogoutContainer = styled.div`
+  display: flex;
+  padding: 15px;
+  margin-top: 100px;
+  color: red;
+  gap: 10px;
+
+  &:hover {
+    color: #3c91e6;
+    cursor: pointer;
+  }
+`;
 
 const Sidebar = () => {
   //JAVASCRIPT
