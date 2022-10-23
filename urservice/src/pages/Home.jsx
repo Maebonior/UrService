@@ -6,6 +6,9 @@ import CardContent from "@mui/material/CardContent";
 import PeopleIcon from "@mui/icons-material/People";
 import RecentApp from "../components/RecentApp";
 
+//firebase
+import { getDatabase, ref, onValue } from "firebase/database";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;

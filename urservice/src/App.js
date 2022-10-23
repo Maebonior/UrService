@@ -10,7 +10,7 @@ const App = () => {
       <Navbar />
       <Sidebar />
       <Home />
-      <Plumbers/>
+      <Plumbers />
     </div>
   );
 };

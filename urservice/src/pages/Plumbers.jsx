@@ -1,15 +1,57 @@
-import React, { useEffect } from "react";
-import { database } from "../firebase";
-import { uid } from "uid";
-import { DataSnapshot, onValue, ref } from "firebase/database";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { db } from "../firebase";
+import { onValue, ref, child, get } from "firebase/database";
 
+const Container = styled.div`
+  margin-left: 500px;
+  display: flex;
+  flex-flow: wrap;
+`;
+
+const Wrapper = styled.div``;
 const Plumbers = () => {
-  //read
+  const [users, setUsers] = useState([]);
+
   useEffect(() => {
-    onValue(ref(database), (snapshot) => {});
+    onValue(ref(db), (snapshot) => {
+      const data = snapshot.val();
+      // setUsers(data);
+      const result = Object.values(data);
+      const results = Object.values(result[0]);
+      // console.log(results);
+      const plumbers = results.map((userData) => {
+        // console.log(userData);
+        if (userData.userType === "Plumber") {
+          setUsers(userData);
+        } else {
+        }
+      });
+
+      // if (data !== null) {
+      //   const result = Object.values(data).map((key) => {
+      //     setUsers(key);
+      //   });
+      //   console.log(Object.values(users));
+      //   // console.log(result);
+      //   //   //   Object.values(data).map((user) => {
+      //   //   //     setUsers((oldArray) => [...oldArray, user]);
+      //   //   //   });
+      // }
+    });
   }, []);
 
-  return <div>Plumbers</div>;
+  console.log(users);
+
+  return (
+    <Container>
+      <Wrapper>
+        <>
+          <p>{users.firstname + " " + users.userType}</p>
+        </>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default Plumbers;
