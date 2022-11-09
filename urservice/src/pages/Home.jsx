@@ -13,6 +13,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 300px;
+  font-family: "Courier Prime", monospace;
 `;
 
 const CardContainer = styled.div`
@@ -28,7 +29,9 @@ const CardWrapper = styled.div`
   gap: 5px;
 `;
 
-const Span = styled.div``;
+const Span = styled.div`
+  font-family: "Courier Prime", monospace;
+`;
 
 const action = {
   display: "flex",
@@ -41,12 +44,21 @@ const action = {
 const Home = () => {
   return (
     <Container>
-      <h1>DASHBOARD</h1>
+      <p style={{ margin: "10px", color: "#267238", fontSize: "30px" }}>
+        &nbsp;&nbsp;Dashboard
+      </p>
       <CardContainer>
-        <Card sx={{ width: 300, height: 100 }}>
+        <Card
+          sx={{
+            width: 300,
+            height: 100,
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
           <CardActionArea sx={action}>
             <CardContent sx={{ display: "flex", gap: "50px" }}>
-              <PeopleIcon />
+              <PeopleIcon sx={{ color: "#0036cc" }} />
               <CardWrapper>
                 <Span>1500</Span>
                 <Span>Total User</Span>
@@ -54,10 +66,17 @@ const Home = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ width: 300, height: 100 }}>
+        <Card
+          sx={{
+            width: 300,
+            height: 100,
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
           <CardActionArea sx={action}>
             <CardContent sx={{ display: "flex", gap: "50px" }}>
-              <PeopleIcon />
+              <PeopleIcon sx={{ color: "#ad00cc" }} />
               <CardWrapper>
                 <Span>500</Span>
                 <Span>Plumbers</Span>
@@ -65,10 +84,17 @@ const Home = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ width: 300, height: 100 }}>
+        <Card
+          sx={{
+            width: 300,
+            height: 100,
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
           <CardActionArea sx={action}>
             <CardContent sx={{ display: "flex", gap: "50px" }}>
-              <PeopleIcon />
+              <PeopleIcon sx={{ color: "#cc0055" }} />
               <CardWrapper>
                 <Span>1000</Span>
                 <Span>Clients</Span>

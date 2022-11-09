@@ -10,6 +10,7 @@ const Container = styled.div`
   background-color: #134d4d;
   min-width: 100%;
   height: 55px;
+  font-family: "Courier Prime", monospace;
 `;
 
 const Wrapper = styled.div`

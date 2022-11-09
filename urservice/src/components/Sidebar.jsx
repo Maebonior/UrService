@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectLogo from "../Assets/Logo.png";
+import { Link } from "react-router-dom";
 
 //MUI ICONS
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 const Container = styled.div`
@@ -15,6 +15,7 @@ const Container = styled.div`
   height: 100vh;
   color: white;
   top: 0;
+  font-family: "Courier Prime", monospace;
 `;
 
 const ImgContainer = styled.div`
@@ -45,9 +46,10 @@ const OptionContainer = styled.div`
   padding: 15px;
   gap: 10px;
   font-size: 18px;
+  color: white;
 
   &:hover {
-    color: #3c91e6;
+    color: skyblue;
     cursor: pointer;
     transform: scale(1.05);
   }
@@ -86,16 +88,12 @@ const Sidebar = () => {
 
       <MenuContainer>
         <OptionContainer>
-          <DashboardIcon />
-          Dashboard
+          <DashboardIcon sx={{ color: "#00c4cc" }} />
+          <Link to="/">Dashboard</Link>
         </OptionContainer>
         <OptionContainer>
-          <PeopleIcon />
-          Plumbers
-        </OptionContainer>
-        <OptionContainer>
-          <AccountBalanceIcon />
-          Transactions
+          <PeopleIcon sx={{ color: "#00c4cc" }} />
+          <Link to="/Plumbers">Plumbers</Link>
         </OptionContainer>
         <LogoutContainer>
           <LogoutIcon />
